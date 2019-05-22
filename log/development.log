@@ -843,3 +843,206 @@ Processing by DiariesController#show as HTML
 Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/diaries" for ::1 at 2019-05-22 14:52:00 +0900
+Processing by DiariesController#index as HTML
+  Rendering diaries/index.html.erb within layouts/application
+  [1m[36mDiary Load (2.0ms)[0m  [1m[34mSELECT "diaries".* FROM "diaries"[0m
+  ↳ app/views/diaries/index.html.erb:16
+  Rendered diaries/index.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 139ms (Views: 128.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/diaries/new" for ::1 at 2019-05-22 14:52:08 +0900
+Processing by DiariesController#new as HTML
+  Rendering diaries/new.html.erb within layouts/application
+  Rendered diaries/_form.html.erb (111.4ms)
+  Rendered diaries/new.html.erb within layouts/application (113.8ms)
+Completed 200 OK in 131ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/diaries" for ::1 at 2019-05-22 14:54:14 +0900
+Processing by DiariesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IgQl5IFg/10cfTxXV1SfDwcnsli5SJ9rwuRje6oHILtdLrTdRkiPOH5BkGfveskQbf9G6LcjmM7pukSCsemFRQ==", "diary"=>{"title"=>"今日は何の日？", "body"=>"国際生物多様性の日(International Day for Biological Diversity)"}, "commit"=>"Create Diary"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/diaries_controller.rb:30
+  [1m[36mDiary Create (3.4ms)[0m  [1m[32mINSERT INTO "diaries" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "今日は何の日？"], ["body", "国際生物多様性の日(International Day for Biological Diversity)"], ["created_at", "2019-05-22 05:54:14.545297"], ["updated_at", "2019-05-22 05:54:14.545297"]]
+  ↳ app/controllers/diaries_controller.rb:30
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/diaries_controller.rb:30
+Redirected to http://localhost:3000/diaries/4
+Completed 302 Found in 14ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/diaries/4" for ::1 at 2019-05-22 14:54:14 +0900
+Processing by DiariesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/show.html.erb within layouts/application
+  Rendered diaries/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/diaries" for ::1 at 2019-05-22 14:54:29 +0900
+Processing by DiariesController#index as HTML
+  Rendering diaries/index.html.erb within layouts/application
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT "diaries".* FROM "diaries"[0m
+  ↳ app/views/diaries/index.html.erb:16
+  Rendered diaries/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 15:16:59 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shimataku0623/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shimataku0623/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 15:17:03 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shimataku0623/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shimataku0623/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/diaries/4" for ::1 at 2019-05-22 17:11:18 +0900
+Processing by DiariesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.9ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/show.html.erb within layouts/application
+  Rendered diaries/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 71ms (Views: 49.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/diaries/4/edit" for ::1 at 2019-05-22 17:11:32 +0900
+Processing by DiariesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/edit.html.erb within layouts/application
+  Rendered diaries/_form.html.erb (12.2ms)
+  Rendered diaries/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 42ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/diaries/4" for ::1 at 2019-05-22 17:12:02 +0900
+Processing by DiariesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOU4nj1Cx1DgbYsBm21euJfchx5hFkCHiTKEMF7S5Xk6wwjXFDVGlIm0nJSofJZ4l9eEoh1UK77ayotlwZKN3A==", "diary"=>{"title"=>"今日は何の日？", "body"=>"国際生物多様性の日(International Day for Biological Diversity)\r\n\r\n世界共通。\r\n"}, "commit"=>"Update Diary", "id"=>"4"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/diaries_controller.rb:44
+  [1m[36mDiary Update (1.7ms)[0m  [1m[33mUPDATE "diaries" SET "body" = ?, "updated_at" = ? WHERE "diaries"."id" = ?[0m  [["body", "国際生物多様性の日(International Day for Biological Diversity)\r\n\r\n世界共通。\r\n"], ["updated_at", "2019-05-22 08:12:02.155492"], ["id", 4]]
+  ↳ app/controllers/diaries_controller.rb:44
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/diaries_controller.rb:44
+Redirected to http://localhost:3000/diaries/4
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/diaries/4" for ::1 at 2019-05-22 17:12:02 +0900
+Processing by DiariesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/show.html.erb within layouts/application
+  Rendered diaries/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/diaries/4/edit" for ::1 at 2019-05-22 17:19:46 +0900
+Processing by DiariesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.4ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/edit.html.erb within layouts/application
+  Rendered diaries/_form.html.erb (81.2ms)
+  Rendered diaries/edit.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/diaries" for ::1 at 2019-05-22 17:21:44 +0900
+Processing by DiariesController#index as HTML
+  Rendering diaries/index.html.erb within layouts/application
+  [1m[36mDiary Load (0.4ms)[0m  [1m[34mSELECT "diaries".* FROM "diaries"[0m
+  ↳ app/views/diaries/index.html.erb:16
+  Rendered diaries/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/diaries/4" for ::1 at 2019-05-22 17:28:48 +0900
+Processing by DiariesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/show.html.erb within layouts/application
+  Rendered diaries/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/diaries/4" for ::1 at 2019-05-22 17:28:53 +0900
+Processing by DiariesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fOgmO2TR1LvMnXGAWLQcu8rDyV1464pVI6+sLo6Gzj1I8Rlg7M7chjPTRsN0cArPuRyNbAhdYpjCZPACHanYjQ==", "id"=>"4"}
+  [1m[36mDiary Load (0.2ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/diaries_controller.rb:57
+  [1m[36mDiary Destroy (9.1ms)[0m  [1m[31mDELETE FROM "diaries" WHERE "diaries"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/diaries_controller.rb:57
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/diaries_controller.rb:57
+Redirected to http://localhost:3000/diaries
+Completed 302 Found in 17ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/diaries" for ::1 at 2019-05-22 17:28:53 +0900
+Processing by DiariesController#index as HTML
+  Rendering diaries/index.html.erb within layouts/application
+  [1m[36mDiary Load (0.4ms)[0m  [1m[34mSELECT "diaries".* FROM "diaries"[0m
+  ↳ app/views/diaries/index.html.erb:16
+  Rendered diaries/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/diaries/new" for ::1 at 2019-05-22 17:36:51 +0900
+Processing by DiariesController#new as HTML
+  Rendering diaries/new.html.erb within layouts/application
+  Rendered diaries/_form.html.erb (3.1ms)
+  Rendered diaries/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/diaries" for ::1 at 2019-05-22 17:36:52 +0900
+Processing by DiariesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jWHSbqTqKSZhg2KP8WWcyMtq8alA2dCFcPCgpC0TmxLyS0NXY8JZQwO/zr9JS8rXobIFGU6y1yBbroddNv0+7A==", "diary"=>{"title"=>"", "body"=>""}, "commit"=>"Create Diary"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/diaries_controller.rb:30
+  [1m[36mDiary Create (0.5ms)[0m  [1m[32mINSERT INTO "diaries" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2019-05-22 08:36:52.912093"], ["updated_at", "2019-05-22 08:36:52.912093"]]
+  ↳ app/controllers/diaries_controller.rb:30
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/diaries_controller.rb:30
+Redirected to http://localhost:3000/diaries/5
+Completed 302 Found in 17ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/diaries/5" for ::1 at 2019-05-22 17:36:52 +0900
+Processing by DiariesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT  "diaries".* FROM "diaries" WHERE "diaries"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/diaries_controller.rb:67
+  Rendering diaries/show.html.erb within layouts/application
+  Rendered diaries/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/diaries" for ::1 at 2019-05-22 17:36:55 +0900
+Processing by DiariesController#index as HTML
+  Rendering diaries/index.html.erb within layouts/application
+  [1m[36mDiary Load (0.3ms)[0m  [1m[34mSELECT "diaries".* FROM "diaries"[0m
+  ↳ app/views/diaries/index.html.erb:16
+  Rendered diaries/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
